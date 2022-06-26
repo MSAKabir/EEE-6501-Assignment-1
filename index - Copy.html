@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+body{
+  background:linear-gradient(to bottom, #666666, rgba(0, 0, 0, 0.8)),url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG93ZXIlMjBncmlkfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+  background-size: cover;
+   font-size: 15px;
+   color:  #f2f2f2;
+   text-shadow:0 0 2px white;
+
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#loader{
+  display:none;
+}
+
+#mainheader{
+  Color:black;
+  font-size:40px;
+  margin:0% 0 3% 0;padding-top: 3%;
+  animation: mhdr 4s linear infinite;
+}
+@keyframes mhdr{
+	0%{text-shadow:0px 0px 6px white;Color:black;opacity:1;}
+  50%{text-shadow:0px 0px 6px #B2BABB;Color:#0E0C00;opacity:0.5;}
+	100%{text-shadow:0px 0px 6px white;Color:black;opacity:1;}
+}
+
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 60px 0 0% 0;
+    height: 50px;
+	background: rgba(0,0,0,0);
+	animation: animateBg 10s linear infinite;
+
+
+}
+@keyframes animateBg{
+	0%{filter:hue-rotate(0deg);}
+	100%{filter:hue-rotate(2880deg);}
+}
+section .loader{
+	position: relative;
+	width: 120px;
+	height: 120px;
+}
+section .loader span{
+position: absolute;
+top: 0;
+left: 0;
+width: 40%;
+height: 30%;
+transform: rotate(calc(18deg*var(--i)));
+}
+section .loader span::before {
+	content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 5px;
+height: 5px;
+background: #42f5f5;
+border-radius: 20%;
+box-shadow: 0 0 10px #42f5f5, 0 0 20px #42f5f5,0 0 40px #42f5f5, 0 0 60px #42f5f5;
+animation: animateBge 2s linear infinite;
+animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animateBge{
+	0%{transform: scale(1.5);}
+	80%{transform: scale(0);}
+	100%{transform: scale(0);}
+}
+
+
+
+
+
+#username,#user,#username2, #btn{
+  text-align:center;
+  font-size: 20px;
+   width: 796px;
+  height: 36px;
+   margin: 2px 0% 0% 2px; 
+   padding:0;
+   border:0;
+   Color: rgb(230, 250, 250);
+  background-color: rgb(50, 50, 50);
+}
+#username#user,{
+  font-size: 15px;
+}
+#username2{
+  display: none;
+  width: 400px;
+  margin: 3% 0 2% 8%;
+  background-color:  #4d0000;
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-width: 2px;
+  box-shadow:0 0 5px #f2f2f2;
+  animation: animateit2 5s linear infinite;
+}
+@keyframes animateit2 {
+  0% {background-color:  #4d0000;box-shadow:0 0 5px #f2f2f2;}
+  50% {background-color: #000000;box-shadow:0 0 8px  #ffffe6;}
+  100% {background-color:  #4d0000;box-shadow:0 0 5px #f2f2f2;}
+}
+a:link, a:visited {
+  margin: 1.5% 0 2% 5%;
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: rgb(00, 20, 20);
+  color: rgb(0, 250, 250);
+  box-shadow: 0px 0px 10px #000000;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-shadow:0px 0px 2px #00ffff;
+  animation: animateanc 2s linear infinite;
+}
+@keyframes animateanc {
+  0% {box-shadow:0 0 5px #00ace6;border: 3px solid #00ace6;}
+  50% {box-shadow:0 0 6px  #ffffff;border: 3px solid #ffffff;}
+  100% {box-shadow:0 0 5px #00ace6;border: 3px solid #00ace6;}
+}
+a:hover, a:active {
+  background-color:  black;
+  Color: white;
+}
+#btn{
+  font-size: 25px;
+  width: 300px;
+  height: 60px;
+  margin: 2px 0% 0% 5%; 
+   background-color:black;
+  Color:  #bfbfbf;
+  box-shadow: 0 0 5px white;
+
+  border-style: double;
+  border-color: white;
+  border-width: 5px;
+  text-align: center;
+}
+#btn:hover{
+  background-color: rgb(0, 0, 50);
+  color: rgb(0, 250, 250);
+  box-shadow: 0px 0px 10px #00ace6;
+}
+.rgbtest{
+  position: relative;
+  margin: 2% 0% 2% 2%;   // top r8 bot left
+  width: 800px;
+  height: 40px;
+
+}
+@keyframes mymove {
+  0% {background-color: rgb(153, 255, 204);}
+  50% {background-color: rgb(200, 50, 204);}
+  100% {background-color: rgb(153, 255, 204);}
+}
+.rgbtest:before,.rgbtest:after{
+  content:'';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg, #555555,#333333,#222222,#222222,#333333,#444444);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background-size: 100%; 
+ z-index: -1;
+ animation: animateit 5s linear infinite;
+}
+.rgbtest:after{
+  filter:blur(10px);
+}
+@keyframes animateit{
+  0% {background-size: 200%; background-position: top right;box-shadow: 0px 0px 6px white;}
+  50% {background-size: 200%; background-position: bottom left;box-shadow: 0px 0px 5px white;}
+  100% {background-size: 200%; background-position: top right;box-shadow: 0px 0px 6px white;}
+}
+#header2{
+  display:none;
+}
+</style>
+    <base target="_top">
+  </head>
+  <body>
+    <div id = "bodycontainer">
+    <center><h1 id="mainheader">EEE 6501 -- Assignment 1</h1></center>
+
+    <center><h2>Solution of the questions</h2></center>
+
+    
+    <center><a target=”_blank” href="https://docs.google.com/spreadsheets/d/1QwrwQIu0x0rYnTAgt0VHIgAoobRyHhdX-xvdRtFfcow/edit#gid=0">All data are available here</a></center>
+    <br>
+    <center><a target=”_blank” href="https://colab.research.google.com/drive/1UB8mSpuKHq9NtJk2P-BtNS3aQu1h_Er0#scrollTo=iqvMHJhyDF7M">Colab link of the solutions. Answer will be updated in the Google Sheets of the previous link</a></center>
+    <br>
+    <center><a target=”_blank” href="https://script.google.com/home/projects/1InHeG2wc7wKHCkCEQxn5BRwRLDqnH5Q2KZC3SgMCbB2RAoi2x0Bx2Vfo/edit">Solution 1 in Google Apps Script. Answer will be updated in the Google Sheets of the previous link</a></center>
+
+    <!-- <section id = "loader"><div class = "loader"> -->
+<!-- 	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+	<span style="--i:4;"></span>
+	<span style="--i:5;"></span>
+	<span style="--i:6;"></span>
+	<span style="--i:7;"></span>
+	<span style="--i:8;"></span>
+	<span style="--i:9;"></span>
+	<span style="--i:10;"></span>
+	<span style="--i:11;"></span>
+	<span style="--i:12;"></span>
+	<span style="--i:13;"></span>
+	<span style="--i:14;"></span>
+	<span style="--i:15;"></span>
+	<span style="--i:16;"></span>
+	<span style="--i:17;"></span>
+	<span style="--i:18;"></span>
+	<span style="--i:19;"></span>
+	<span style="--i:20;"></span> -->
+<!-- </div>
+</section> -->
+    
+    </div>
+    <script>
+    </script>
+  </body>
+</html>
